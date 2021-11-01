@@ -22,14 +22,16 @@ public class Homework {
     public static void checkSumSign() {
         int first = 148;
         int second = 512;
-        if (first + second >= 0)
+        if (first + second >= 0) {
             System.out.println("Сумма положительна");
-        else
+        }
+        else {
             System.out.println("The sum is negative");
+        }
     }
 
     public static boolean checkSumSign(int first, int second) {
-        return (first + second >= 0);
+        return first + second >= 0;
     }
 
     public static void printColor() {
