@@ -8,9 +8,14 @@ public class Bowl {
         System.out.printf("Food increased by %d pts, there is now %d\n", amount, foodAmount);
     }
 
-    public void decreaseFood(int amount) {
-        this.foodAmount -= amount;
+    public boolean decreaseFood(int amount) {
+        if (foodAmount < amount) {
+            System.out.printf("Not enough food, you want %d, and there's %d\n", amount, foodAmount);
+            return false;
+        }
+        foodAmount -= amount;
         System.out.printf("Food decreased by %d pts, there is now %d\n", amount, foodAmount);
+        return true;
     }
 
 
